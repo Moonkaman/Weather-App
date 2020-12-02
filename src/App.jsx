@@ -1,12 +1,15 @@
 import './App.css';
-import Button from '@material-ui/core/Button'
+import Container from '@material-ui/core/Container'
+import {Route} from 'react-router-dom'
+
+//Views
+import HomeView from './views/HomeView';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Weather</h1>
-      
-    </div>
+    <Container>
+      <Route exact path="/" render={_ => <HomeView/>}/>
+    </Container>
   );
 }
 
